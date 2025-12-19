@@ -14,8 +14,13 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log(" MongoDB Connected"))
   .catch(err => console.log(err));
+app.get('/',async(req,res)=>{
+  res.send("working")
+})
 
-
+app.get("/",(req,res)=>{
+  res.send("working")
+})
 // REGISTER
 app.post("/api/register", async (req, res) => {
   const { name, email, password } = req.body;
