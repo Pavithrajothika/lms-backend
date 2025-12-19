@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect("mongodb+srv://backenduser:pavithra@cluster0.vzuyxvo.mongodb.net/Pavithra?appName=Cluster0")
   .then(() => console.log(" MongoDB Connected"))
   .catch(err => console.log(err));
 app.get('/',async(req,res)=>{
